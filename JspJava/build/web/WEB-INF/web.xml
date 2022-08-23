@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <servlet>  
+        <servlet-name>configJsp</servlet-name>  
+        <jsp-file>/Pro6Config.jsp</jsp-file>  
+  
+        <init-param>  
+            <param-name>dname</param-name>  
+            <param-value>Dhruvisha</param-value>  
+        </init-param>  
+  
+    </servlet>  
+  
+    <servlet-mapping>  
+        <servlet-name>configJsp</servlet-name>  
+        <url-pattern>/configDemo</url-pattern>  
+    </servlet-mapping>  
+  
+  
+    <servlet>  
+        <servlet-name>sonoojaiswal</servlet-name>  
+        <jsp-file>/Pro7Application.jsp</jsp-file>  
+    </servlet>  
+  
+    <servlet-mapping>  
+        <servlet-name>sonoojaiswal</servlet-name>  
+        <url-pattern>/applicationJsp</url-pattern>  
+    </servlet-mapping>  
+  
+    <context-param>  
+        <param-name>dname</param-name>  
+        <param-value>sun.jdbc.odbc.JdbcOdbcDriver</param-value>  
+    </context-param>  
+    
+     <servlet>  
+  <servlet-name>s1</servlet-name>  
+  <servlet-class>com.demo.ControllerServlet</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+  <servlet-name>s1</servlet-name>  
+  <url-pattern>/ControllerServlet</url-pattern>  
+  </servlet-mapping>  
+    
+</web-app>
